@@ -103,6 +103,7 @@ img {
 
 .main-navigation-wrapper {
   background-color: var(--basic-dark-blue);
+  height: 42px;
 }
 
 .user-navigation {
@@ -144,44 +145,41 @@ img {
   background-color: transparent;
 }
 
-.user-navigation-search-form input,
-.user-navigation-search-form button {
+.user-navigation-search-form input {
+  width: 228px;
+  margin: 9px 4px 9px 42px;
+  padding: 0;
   box-sizing: border-box;
   border: 0;
   outline: 0;
   background-color: transparent;
 }
 
-.user-navigation-search-form input {
-  width: 100%;
-  height: 42px;
-  padding-left: 43px;
-}
-
 .user-navigation-search-form input::placeholder {
   color: var(--basic-white);
 }
 
-.user-navigation-search-form input:focus::placeholder {
+.user-navigation-search-form input:active::placeholder {
   opacity: 0.3;
 }
 
-
-.user-navigation-search-form button {
+.user-navigation-search-form label::before {
+  content:"";
   position: absolute;
+  background-position: 0 0;
+  width: 17px;
+  height: 17px;
+  background-image: url("../img/loop.svg");
   top: 10px;
-  left: 11px;
-}
-
-.search-form-loop {
+  left: 18px;
   opacity: 0.3;
 }
 
-.search-form-loop:hover {
+.user-navigation-search-form label:hover::before {
   opacity: 1;
 }
 
-.search-form-loop:active {
+.user-navigation-search-form label:active::before {
   opacity: 0.3;
 }
 
@@ -209,7 +207,7 @@ img {
 }
 
 .user-navigation-bookmarks-form label {
-  margin: 9px 4px 9px 43px;;
+  margin: 9px 4px 9px 43px;
 }
 
 .user-navigation-bookmarks-form input {
@@ -286,9 +284,6 @@ img {
   opacity: 0.3;
 }
 
-
-
-
 .user-navigation-basket-form label::before {
   content: "";
   position: absolute;
@@ -312,6 +307,7 @@ img {
 .user-navigation-purchase-button {
   width: 150px;
   height: 42px;
+  padding: 0;
   border: 0;
   outline: 0;
   background-color: var(--basic-green);
@@ -319,9 +315,18 @@ img {
 
 .user-navigation-purchase-button p {
   margin: 0;
+  margin-bottom: 2px;
   color: var(--basic-white);
 }
 
 .user-navigation-purchase-button:hover {
   background-color: var(--light-green);
+}
+
+.user-navigation-purchase-button:focus p {
+  opacity: 0.3;
+}
+
+.user-navigation-purchase-button:focus {
+  background-color: var(--basic-green);
 }
