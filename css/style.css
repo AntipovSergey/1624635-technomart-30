@@ -57,6 +57,11 @@
   --light-green: #5FBB2D;
   --basic-pink-red: #ee3643;
   --dark-pink-red: #ba2732;
+  --materials_delivery: #ffbf47;
+  --instrument: #3bbce3;
+  --technics: #dc91d8;
+  --sales:#8ed78f;
+
 }
 
 /*Global*/
@@ -186,32 +191,24 @@ img {
   opacity: 0.3;
 }
 
-.user-navigation-first-part-bookmarks-button {
-  width: 150px;
-  height: 42px;
-  border: 0;
-  outline: 0;
-  padding: 0;
-  background-color: transparent;
-  color: var(--basic-white);
-}
-
-.user-navigation-first-part-bookmarks-button:focus {
-  background-color: var(--deep-dark-blue);
-}
-
 .user-navigation-first-part-bookmarks-form {
   display: flex;
   justify-content: flex-start;
   position: relative;
   box-sizing: border-box;
   text-align: center;
+  width: 150px;
   height: 42px;
+  background-color: transparent;
+}
+
+.user-navigation-first-part-bookmarks-form:active {
+  background-color: var(--deep-dark-blue);
 }
 
 .user-navigation-first-part-bookmarks-form label {
   padding: 2px;
-  margin: 9px 4px 9px 43px;
+  margin: 8px 4px 10px 43px;
 }
 
 .user-navigation-first-part-bookmarks-form input {
@@ -248,32 +245,24 @@ img {
   opacity: 0.3;
 }
 
-.user-navigation-first-part-basket-button {
-  width: 150px;
-  height: 42px;
-  border: 0;
-  outline: 0;
-  padding: 0;
-  background-color: transparent;
-  color: var(--basic-white);
-}
-
-.user-navigation-first-part-basket-button:focus {
-  background-color: var(--deep-dark-blue);
-}
-
 .user-navigation-first-part-basket-form {
   display: flex;
   justify-content: flex-start;
   position: relative;
   box-sizing: border-box;
+  width: 150px;
   height: 42px;
   text-align: center;
+  background-color: transparent;
+}
+
+.user-navigation-first-part-basket-form:active {
+  background-color: var(--deep-dark-blue);
 }
 
 .user-navigation-first-part-basket-form label {
   padding: 2px;
-  margin: 9px 4px 9px 43px;
+  margin: 8px 4px 10px 43px;
 }
 
 .user-navigation-first-part-basket-form input {
@@ -317,11 +306,6 @@ img {
   border: 0;
   outline: 0;
   background-color: var(--basic-green);
-}
-
-.user-navigation-first-part-purchase-button p {
-  margin: 0;
-  margin-top: 2px;
   color: var(--basic-white);
 }
 
@@ -329,7 +313,7 @@ img {
   background-color: var(--light-green);
 }
 
-.user-navigation-first-part-purchase-button:focus p {
+.user-navigation-first-part-purchase-button:focus span {
   opacity: 0.3;
 }
 
@@ -341,6 +325,7 @@ img {
 
 .main-navigation-wrapper-gray {
   background-color: var(--basic-background);
+  height: 278px;
 }
 
 .user-navigation-second-part {
@@ -501,3 +486,151 @@ img {
   opacity: 0.5;
 }
 
+/*Main*/
+
+/*--Features--*/
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(3, 123px);
+  grid-template-areas:
+    "materials instruments technics"
+    "catalog catalog sales"
+    "catalog catalog delivery";
+  gap: 20px 20px;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: var(--basic-white);
+  margin-top: 59px;
+}
+
+.features-title {
+  margin-top: 20px;
+  margin-left: 23px;
+  margin-bottom: 0;
+}
+
+.features-link {
+  display: inline-block;
+  box-sizing: border-box;
+  text-align: center;
+  vertical-align: middle;
+  margin-top: 14px;
+  margin-left: 23px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  text-transform: uppercase;
+  width: 135px;
+  background: var(--basic-white);
+  mix-blend-mode: normal;
+  opacity: 0.3;
+}
+
+.features-link span {
+  color: var(--basic-white);
+  opacity: 1;
+}
+
+.materials {
+  position: relative;
+  grid-area: materials;
+  background-color: var(--materials_delivery);
+}
+
+.materials::after {
+  position: absolute;
+  content: "";
+  width: 44px;
+  height: 65px;
+  background-position: 0 0;
+  background-image: url("../img/materials-icon.svg");
+  left: 214px;
+  top: 31px;
+}
+
+.instruments {
+  position: relative;
+  grid-area: instruments;
+  background-color: var(--instrument);
+}
+
+.instruments::after {
+  position: absolute;
+  content: "";
+  width: 75px;
+  height: 61px;
+  background-position: 0 0;
+  background-image: url("../img/instruments-icon.svg");
+  left: 194px;
+  top: 34px;
+}
+
+.technics {
+  position: relative;
+  grid-area: technics;
+  background-color: var(--technics);
+}
+
+.technics::after {
+  position: absolute;
+  content: "";
+  width: 78px;
+  height: 62px;
+  background-position: 0 0;
+  background-image: url("../img/technics-icon.svg");
+  left: 191px;
+  top: 31px;
+}
+
+.catalog {
+  grid-area: catalog;
+  position: relative;
+  background-image: url("../img/catalog.jpg");
+  background-color: var(--basic-white);
+}
+
+.catalog-shape {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.sales {
+  position: relative;
+  grid-area: sales;
+  background-color: var(--sales);
+}
+
+.sales::after {
+  position: absolute;
+  content: "";
+  width: 59px;
+  height: 72px;
+  background-position: 0 0;
+  background-image: url("../img/sales-icon.svg");
+  left: 196px;
+  top: 26px;
+}
+
+.delivery {
+  position: relative;
+  grid-area: delivery;
+  background-color: var(--materials_delivery);
+}
+
+.delivery::after {
+  position: absolute;
+  content: "";
+  width: 78px;
+  height: 63px;
+  background-position: 0 0;
+  background-image: url("../img/delivery-icon.svg");
+  left: 191px;
+  top: 32px;
+}
