@@ -49,14 +49,18 @@
   --basic-black: #000000;
   --light-gray: #c5c5c5;
   --very-light-gray: #eaeaea;
+  --extra-light-gray: #d9d9d9;
   --dark-gray:#a9a9a9;
   --basic-background: #f1f5f7;
+  --middle-light-blue: #cbcfd6;
   --basic-dark-blue: #293449;
   --middle-dark-blue: #32425c;
   --basic-dark-blue_alt: #3d546f;
   --deep-dark-blue: #161d29;
   --basic-green: #63a63e;
   --light-green: #5FBB2D;
+  --middle-dark-green: #367315;
+  --alt-middle-dark-green: #518534;
   --basic-pink-red: #ee3643;
   --dark-pink-red: #ba2732;
   --middle-dark-pink-red:#ca2c37;
@@ -727,6 +731,7 @@ img {
 
 .popular-products {
   margin-top: 59px;
+  position: relative;
 }
 
 .popular-products-wrapper {
@@ -894,4 +899,168 @@ img {
   z-index: -1;
 }
 
+.popular-products-hover-item {
+  box-sizing: border-box;
+  position: relative;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--very-light-gray);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  background-color: var(--basic-white);
+}
 
+.hover-item-first-hide,
+.hover-item-second-hide,
+.hover-item-third-hide,
+.hover-item-fourth-hide {
+  display: none;
+}
+
+.hover-item-first-show {
+  display: block;
+  position: absolute;
+  top:109px;
+  left: 0;
+}
+
+.hover-item-second-show {
+  position: absolute;
+  top:109px;
+  left: 240px;
+}
+
+.hover-item-third-show {
+  position: absolute;
+  top:109px;
+  left: 480px;
+}
+
+.hover-item-fourth-show {
+  position: absolute;
+  top:109px;
+  right: 0;
+}
+
+.purchase-button {
+  position: relative;
+  box-sizing: border-box;
+  width: 135px;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--basic-white);
+  margin: 0;
+  margin-top: 37px;
+  margin-left: 41px;
+  padding: 10px 12px 10px 25px;
+  border: none;
+  outline: none;
+  background-color: var(--basic-green);
+  box-shadow: inset 0px -3px 0px var(--middle-dark-green);
+  border-radius: 2px;
+  text-transform: uppercase;
+}
+
+.purchase-button::before {
+  position: absolute;
+  content: "";
+  width: 15px;
+  height: 15px;
+  background-position: 0 0;
+  background-image: url("../img/trade-cart.svg");
+  opacity: 0.3;
+  top: 10px;
+  left: 30px;
+}
+
+.purchase-button:hover {
+  background-color: var(--light-green);
+}
+
+.purchase-button:active {
+  background-color: var(--alt-middle-dark-green);
+}
+
+.to-boockmarks-button {
+  position: relative;
+  box-sizing: border-box;
+  width: 135px;
+  font-size: 14px;
+  line-height: 18px;
+  color: var(--middle-dark-blue);
+  margin: 0;
+  margin-top: 10px;
+  margin-left: 41px;
+  margin-bottom: 54px;
+  padding-top: 8px;
+  padding-bottom: 6px;
+  text-align: center;
+  border: 3px solid var(--basic-green);
+  outline: none;
+  background-color: var(--basic-white);
+  text-transform: uppercase;
+}
+
+.to-boockmarks-button:hover {
+  border:3px solid var(--middle-dark-blue);
+}
+
+.to-boockmarks-button:active {
+  border:3px solid var(--middle-light-blue);
+  color: var(--middle-light-blue);
+}
+
+/*--Popular manufacturers--*/
+
+.popular-manufacturers {
+  margin-top: 70px;
+}
+
+.popular-manufacturers-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  background-color: var(--light-brown);
+  font-weight: 400;
+}
+
+.popular-manufacturers-title {
+  margin: 0;
+  margin-top: 29px;
+  margin-left: 28px;
+  margin-bottom: 30px;
+  font-size: 30px;
+  line-height: 30px;
+  color: var(--middle-dark-blue);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.popular-manufacturers-link {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 192px;
+  margin: 25px 19px 26px 334px;
+  padding: 11px 38px 9px 39px;
+  font-size: 14px;
+  line-height: 18px;
+  background-color: var(--basic-pink-red);
+  color: var(--basic-white);
+  text-transform: uppercase;
+}
+
+.popular-manufacturers-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+  margin-top: 20px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.popular-manufacturers-list li {
+  width: 220px;
+  height: 145px;
+  background-color: var(--basic-white);
+  margin-bottom: 20px;
+}
