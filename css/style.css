@@ -1058,9 +1058,20 @@ img {
   list-style-type: none;
 }
 
-.popular-manufacturers-list li {
+.popular-manufacturers-list-item-image {
+  background-color: var(--basic-white);
+}
+
+.popular-manufacturers-list-item {
   width: 220px;
   height: 145px;
-  background-color: var(--basic-white);
   margin-bottom: 20px;
+}
+
+.popular-manufacturers-list-item:hover {
+  box-shadow: 0px 4px 20px var(--extra-light-gray);
+}
+
+.popular-manufacturers-list-item:active {
+  opacity: 0.3;
 }
