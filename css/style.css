@@ -53,10 +53,13 @@
   --dark-gray:#a9a9a9;
   --basic-background: #f1f5f7;
   --middle-light-blue: #cbcfd6;
+  --extra-light-blue: #f3f7f9;
   --basic-dark-blue: #293449;
   --middle-dark-blue: #32425c;
+  --alt-middle-dark-blue: #405069;
   --basic-dark-blue_alt: #3d546f;
   --deep-dark-blue: #161d29;
+  --alt-deep-blue: #212a3a;
   --basic-green: #63a63e;
   --light-green: #5FBB2D;
   --middle-dark-green: #367315;
@@ -70,6 +73,7 @@
   --technics: #dc91d8;
   --sales:#8ed78f;
   --light-brown: #f9f5f0;
+  --dark-light-brown:#ffd180;
 
 }
 
@@ -456,6 +460,7 @@ img {
 
 .site-navigation {
   display: flex;
+  flex-wrap: wrap;
   list-style-type: none;
   margin: 0;
   margin-top: 44px;
@@ -466,17 +471,17 @@ img {
 }
 
 .site-navigation-item {
-  padding: 16px 24px 20px 27px;
+  padding: 16px 28px 20px 28px;
   background-color: var(--middle-dark-blue);
   box-shadow: inset 0px -5px 0px var(--basic-dark-blue);
 }
 
 .site-navigation-item:first-child {
-  padding: 16px 31px 20px 52px;
+  padding: 16px 28px 20px 54px;
 }
 
 .site-navigation-item:last-child {
-  padding: 16px 47px 20px 60px;
+  padding: 16px 55px 20px 28px;
 }
 
 .site-navigation-item:hover {
@@ -769,6 +774,7 @@ img {
 .popular-products-list {
   display: flex;
   flex-wrap: wrap;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin: 0;
   margin-top: 20px;
@@ -1018,6 +1024,7 @@ img {
 
 .popular-manufacturers-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: flex-start;
   background-color: var(--light-brown);
   font-weight: 400;
@@ -1074,4 +1081,402 @@ img {
 
 .popular-manufacturers-list-item:active {
   opacity: 0.3;
+}
+
+/*--Services--*/
+
+.services {
+  margin-top: 50px;
+}
+
+.services-wrapper {
+  background-color: var(--basic-background);
+}
+
+.services-container {
+  position: relative;
+  height: 522px;
+}
+
+.services-title,
+.services-list-info-title {
+  font-weight: 400;
+  text-transform: uppercase;
+  font-size: 30px;
+  line-height: 30px;
+}
+
+.services-title {
+  display: inline-block;
+  margin: 0;
+  margin-top: 64px;
+  margin-bottom: 25px;
+  padding: 0;
+}
+
+.services-text,
+.services-list-info-text {
+  font-family: PT Sans;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.services-text {
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.services-list {
+  position: relative;
+  margin: 0;
+  margin-top: 70px;
+  margin-bottom: 99px;
+  padding: 0;
+  list-style-type: none;
+}
+
+.services-list-button {
+  border: none;
+  outline: none;
+  width: 240px;
+  padding: 13px 139px 17px 22px;
+  font-weight: 700;
+  font-size: 21px;
+  line-height: 30px;
+  text-align: left;
+  color: var(--basic-white);
+  background-color: var(--middle-dark-blue);
+  box-shadow: 0px 1px 0px var(--basic-dark-blue), inset 0px 1px 0px var(--alt-middle-dark-blue);
+}
+
+.services-list-button:hover {
+  background-color: var(--basic-dark-blue);
+}
+
+.services-list-button:active {
+  color: var(--middle-dark-blue);
+  background-color: var(--basic-white);
+  box-shadow: 0px 1px 0px var(--basic-white);
+}
+
+.services-list::after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 279px;
+  background-position: 0 0;
+  background-image: url("../img/services/services-object.svg");
+  top: -49px;
+  left: 230px;
+  z-index: 3;
+}
+
+.services-list-info {
+  position: relative;
+  width: 619px;
+}
+
+.services-list-info-title {
+  margin: 0;
+  padding: 0;
+  color: var(--middle-dark-blue);
+}
+
+.services-list-info-text {
+  display: block;
+  margin: 0;
+  margin-top: 30px;
+  padding: 0;
+}
+
+.services-list-info-image {
+  position: absolute;
+  top: 22px;
+  left: 151px;
+}
+
+.info-show {
+  position: absolute;
+  top: 235px;
+  left: 320px;
+}
+
+.info-hidden {
+  display: none;
+}
+
+/*--Company info--*/
+
+.company-info {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.about-company {
+  width: 460px;
+  margin-right: 179px;
+}
+
+.about-company-title,
+.company-contacts-title {
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+}
+
+.about-company-title {
+  display: block;
+  margin: 0;
+  margin-top: 70px;
+  padding: 0;
+}
+
+.about-company-text,
+.company-contacts-text {
+  font-family: PT Sans;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.about-company-text {
+  margin: 0;
+  margin-top: 24px;
+  margin-bottom: 1px;
+  padding: 0;
+}
+
+.about-company-transport-companies {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.about-company-transport-companies-item {
+  position: relative;
+  margin-left: 37px;
+  margin-bottom: 12px;
+}
+
+.about-company-transport-companies-item::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 2px;
+  background-position: 0 0;
+  background-image: url("../img/company-info/list-object.svg");
+  top: 9px;
+  left: -34px;
+}
+
+.about-company-transport-companies-item:last-child {
+  margin-bottom: 0;
+}
+
+.about-company-link,
+.company-contacts-link {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: var(--basic-white);
+}
+
+.about-company-link {
+  display: block;
+  box-sizing: border-box;
+  width: 220px;
+  margin-top: 20px;
+  text-align: center;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  background-color: var(--basic-pink-red);
+}
+
+.company-contacts-title {
+  margin-top: 70px;
+}
+
+.company-contacts-text {
+  margin: 0;
+  margin-top: 24px;
+  padding: 0;
+}
+
+.company-contacts-map {
+  margin-top: 32px;
+}
+
+.company-contacts-link {
+  display: block;
+  box-sizing: border-box;
+  width: 300px;
+  margin-top: 25px;
+  text-align: center;
+  padding-top: 11px;
+  padding-bottom: 9px;
+  background-color: var(--basic-pink-red);
+}
+
+/*--Main footer--*/
+
+.main-footer {
+  margin-top: 70px;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.main-footer-first-part-wrapper {
+  background-color: var(--middle-dark-blue);
+  height: 193px;
+}
+
+.main-footer-first-part-container {
+  position: relative;
+}
+
+.main-footer-contacts-text {
+ color: var(--extra-light-blue);
+}
+
+.main-footer-site-nav,
+.social-buttons,
+.main-footer-products-nav {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.main-footer-site-nav {
+  position: absolute;
+  top: 37px;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.site-nav-item {
+  margin-right: 58px;
+}
+
+.site-nav-item:last-child {
+  margin: 0;
+}
+
+.site-nav-link {
+  color: var(--basic-background);
+}
+
+.main-footer-products-nav {
+  position: absolute;
+  top: 95px;
+  right: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.products-nav-item {
+  margin-right: 58px;
+}
+
+.products-nav-item:last-child {
+  margin: 0;
+}
+
+.products-nav-link {
+  color: var(--dark-light-brown);
+}
+
+.site-nav-link:hover,
+.products-nav-link:hover {
+  text-decoration-line: underline;
+}
+
+.site-nav-link:active,
+.products-nav-link:active {
+  opacity: 0.5;
+}
+
+.main-footer-second-part-wrapper {
+  background-color: var(--basic-dark-blue);
+  height: 107px;
+}
+
+.main-footer-second-part-container {
+  display: flex;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--basic-white);
+}
+
+.copyright-text {
+  margin: 0;
+  padding: 0;
+  padding-top: 36px;
+}
+
+.social-buttons {
+  padding-top: 34px;
+  padding-left: 161px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 134px;
+}
+
+.social-buttons-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--alt-deep-blue);
+}
+
+.social-buttons-link:hover {
+  background-color: var(--basic-pink-red);
+}
+
+.social-buttons-link:active {
+  background-color: var(--basic-pink-red);
+}
+
+.feedback {
+  padding-top: 35px;
+  padding-left: 118px;
+}
+
+.feedback-text {
+  margin: 0;
+  padding: 0;
+}
+
+.producted {
+  padding-top: 35px;
+  padding-left: 51px;
+}
+
+.producted-text {
+  margin: 0;
+  padding: 0;
+}
+
+.feedback-link,
+.producted-link {
+  color: var(--dark-light-brown);
+}
+
+.feedback-link:hover,
+.producted-link:hover {
+  text-decoration-line: underline;
+}
+
+.feedback-link:active,
+.producted-link:active {
+  color: var(--basic-pink-red);
 }
