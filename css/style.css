@@ -154,7 +154,7 @@ img {
   margin: 12px 56px 17px 56px;
 }
 
-.user-navigation-first-part-logo-technomart:focus {
+.user-navigation-first-part-logo-technomart:active {
   background-color: var(--dark-pink-red);
 }
 
@@ -181,28 +181,35 @@ img {
   color: var(--basic-white);
 }
 
-.user-navigation-first-part-search-form input:active::placeholder {
+/*
+
+.search-form-passive input::placeholder {
   opacity: 0.3;
 }
 
-.user-navigation-first-part-search-form label::before {
-  content:"";
+.search-form-active {
+  background-color: var(--basic-white);
+}
+
+.search-form-loop-active path {
+  fill: var(--basic-pink-red);
+}
+
+.search-form-active input::placeholder {
+  color: var(--basic-black);
+}
+
+*/
+
+.search-form-loop {
   position: absolute;
-  background-position: 0 0;
-  width: 17px;
-  height: 17px;
-  background-image: url("../img/loop.svg");
   top: 12px;
-  left: 18px;
+  left: 17px;
   opacity: 0.3;
 }
 
-.user-navigation-first-part-search-form label:hover::before {
+.search-form-loop:hover {
   opacity: 1;
-}
-
-.user-navigation-first-part-search-form label:active::before {
-  opacity: 0.3;
 }
 
 .user-navigation-first-part-bookmarks-form {
@@ -235,7 +242,7 @@ img {
 }
 
 .user-navigation-first-part-bookmarks-form label:active,
-.user-navigation-first-part-bookmarks-form input:focus {
+.user-navigation-first-part-bookmarks-form input:active {
   opacity: 0.3;
 }
 
@@ -288,7 +295,7 @@ img {
 }
 
 .user-navigation-first-part-basket-form label:active,
-.user-navigation-first-part-basket-form input:focus {
+.user-navigation-first-part-basket-form input:active {
   opacity: 0.3;
 }
 
@@ -313,25 +320,30 @@ img {
 }
 
 .user-navigation-first-part-purchase-button {
-  width: 150px;
+  box-sizing: border-box;
   height: 42px;
-  margin-left: -1px;
-  padding: 0;
   border: 0;
   outline: 0;
+  width: 150px;
+  padding-top: 10px;
+  padding-bottom: 12px;
+  margin-left: -1px;
   background-color: var(--basic-green);
   color: var(--basic-white);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
 }
 
 .user-navigation-first-part-purchase-button:hover {
   background-color: var(--light-green);
 }
 
-.user-navigation-first-part-purchase-button:focus span {
+.user-navigation-first-part-purchase-button:active span {
   opacity: 0.3;
 }
 
-.user-navigation-first-part-purchase-button:focus {
+.user-navigation-first-part-purchase-button:active {
   background-color: var(--basic-green);
 }
 
@@ -421,7 +433,7 @@ img {
   color: var(--basic-pink-red);
 }
 
-.login-link:focus {
+.login-link:active {
   color: var(--light-gray);
 }
 
@@ -453,7 +465,7 @@ img {
   color: var(--basic-pink-red);
 }
 
-.registration-link:focus {
+.registration-link:active {
   color: var(--light-gray);
 }
 
@@ -489,7 +501,7 @@ img {
   background-color: var(--basic-dark-blue);
 }
 
-.site-navigation-item:focus {
+.site-navigation-item:active {
   background-color: var(--basic-dark-blue);
 }
 
@@ -497,7 +509,7 @@ img {
   color: var(--basic-white);
 }
 
-.site-navigation-item a:focus {
+.site-navigation-item a:active {
   opacity: 0.5;
 }
 
@@ -688,7 +700,7 @@ img {
   background-color: var(--middle-dark-pink-red);
 }
 
-.features-link-special:focus {
+.features-link-special:active {
   background-color: var(--deep-dark-pink-red);
 }
 
@@ -1612,4 +1624,94 @@ img {
   background-image: url("../img/modal-form/icon-close.svg");
   top: 10px;
   right: 10px;
+}
+
+/*--Catalog--*/
+
+.bookmarks-form {
+  background-color: var(--basic-pink-red);
+}
+
+.basket-form {
+  background-color: var(--basic-pink-red); /*Если у input value > 0, то basket-form - красная*/
+}
+
+.logged-in {
+  position: relative;
+  display: block;
+  box-sizing: border-box;
+  height: 45px;
+  width: 299px;
+  background-color: var(--basic-white);
+  margin: 0;
+  margin-top: 41px;
+  margin-left: 51px;
+  padding: 12px 57px 12px 56px;
+  color: var(--basic-black);
+}
+
+.profile {
+  position: absolute;
+  background-position: 0 0;
+  top: 13px;
+  left: 15px;
+}
+
+.log-out {
+  position: absolute;
+  background-position: 0 0;
+  top: 13px;
+  right: 20px;
+}
+
+.log-out:hover path,
+.profile:hover path {
+  fill: var(--basic-dark-blue_alt);
+}
+
+.log-out:active path,
+.profile:active path {
+  fill: var(--light-gray);
+}
+
+.my-order,
+.my-account {
+  display: inline-block;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 18px;
+  color: var(--middle-dark-blue);
+}
+
+.my-order {
+  position: relative;
+  margin-left: 95px;
+  margin-right: 35px;
+}
+
+.my-order::after {
+  position: absolute;
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-position: 0 0;
+  background-image: url("../img/profile-icon.svg");
+  background-color: var(--middle-dark-blue);
+  top: 7px;
+  right: -24px;
+}
+
+.my-order:hover,
+.my-account:hover {
+  color: var(--basic-pink-red);
+}
+
+.my-order:active,
+.my-account:active {
+  color: var(--light-gray);
+}
+
+.logged-in:active {
+  color: var(--light-gray);
 }
