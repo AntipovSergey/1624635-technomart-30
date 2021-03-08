@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body class="page-body inner-page">
     <header class="main-header catalog-header">
       <nav class="main-navigation">
         <div class="main-navigation-wrapper-blue">
@@ -92,8 +92,45 @@
         </div>
       </nav>
     </header>
-    <main>
-
+    <main class="page-catalog container">
+      <h1 class="visually-hidden">Перфораторы</h1>
+      <ul class="breadcrumbs">
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-item-link" href="#">Каталог</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-item-link" href="#">Инструмент</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a class="breadcrumbs-item-link" href="#">Перфораторы</a>
+        </li>
+      </ul>
+      <p class="page-catalog-about">Перфораторы</p>
+      <section class="filters">
+        <h2 class="visually-hidden">Фильтр товаров</h2>
+        <p class="filters-title">Фильтр:</p>
+        <form method="GET" action="#"></form>
+          <fieldset class="filter-range">
+            <legend class="filter-legend">Цена:</legend>
+            <div class="range-filter">
+              <div class="range-controls">
+                <div class="scale">
+                  <div class="bar"></div>
+                </div>
+                <div class="toggle toggle-min"></div>
+                <div class="toggle toggle-max"></div>
+              </div>
+              <div class="price-controls">
+                <label class="min-price">
+                  <input type="text" name="min-price" value="0">
+                </label>
+                <label class="max-price">
+                  <input type="text" name="max-price" value="30000">
+                </label>
+              </div>
+            </div>
+          </fieldset>
+      </section>
     </main>
     <footer class="main-footer">
       <div class="main-footer-first-part-wrapper">
