@@ -11,7 +11,7 @@ search_form_input.addEventListener('focus', function() {
 });
 
 window.addEventListener('click', function (evt) {
-    if (search_field.classList.contains("search-form-active")) {
+    if (search_field.classList.contains('search-form-active')) {
     evt.preventDefault();
     search_field.classList.remove('search-form-active');
     loopRed.classList.remove('loop-red-active');
@@ -22,6 +22,8 @@ window.addEventListener('click', function (evt) {
 
 //Catalog alt
 let catalog = document.querySelector('.catalog');
+let title = document.querySelector('.features-title-special');
+let subtitle = document.querySelector('.features-subtitle-special');
 let nextButton = document.querySelector('.next');
 let prevButton = document.querySelector('.prev');
 
@@ -29,12 +31,28 @@ nextButton.addEventListener('click', function(evt) {
   evt.preventDefault();
   catalog.classList.toggle('catalog');
   catalog.classList.toggle('catalog-alt');
+
+  if (catalog.classList.contains('catalog')) {
+    title.textContent='Перфоратор';
+    subtitle.textContent = 'Настоящие мужские игрушки';
+  } else {
+    title.textContent='Дрели';
+    subtitle.textContent = 'Соседям на радость!';
+  }
 });
 
 prevButton.addEventListener('click', function(evt) {
   evt.preventDefault();
   catalog.classList.toggle('catalog');
   catalog.classList.toggle('catalog-alt');
+
+  if (catalog.classList.contains('catalog')) {
+    title.textContent='Перфоратор';
+    subtitle.textContent = 'Настоящие мужские игрушки';
+  } else {
+    title.textContent='Дрели';
+    subtitle.textContent = 'Соседям на радость!';
+  }
 });
 
 
