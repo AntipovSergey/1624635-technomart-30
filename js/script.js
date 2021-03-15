@@ -1,10 +1,42 @@
 let search_field = document.querySelector('.user-navigation-first-part-search-form');
 let search_form_input = document.querySelector('.search-form-input');
+let loopRed = document.querySelector('.loop-red-hidden')
 
 search_form_input.addEventListener('focus', function() {
   search_field.classList.add('search-form-active');
+  loopRed.classList.remove('loop-red-hidden');
+  loopRed.classList.add('loop-red-active');
+  document.getElementById('search-form-text-field').placeholder='Перфоратор';
 
 });
+
+window.addEventListener('click', function (evt) {
+    if (search_field.classList.contains("search-form-active")) {
+    evt.preventDefault();
+    search_field.classList.remove('search-form-active');
+    loopRed.classList.remove('loop-red-active');
+    loopRed.classList.add('loop-red-hidden');
+    document.getElementById('search-form-text-field').placeholder='Поиск:';
+    }
+});
+
+//Catalog alt
+let catalog = document.querySelector('.catalog');
+let nextButton = document.querySelector('.next');
+let prevButton = document.querySelector('.prev');
+
+nextButton.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  catalog.classList.toggle('catalog');
+  catalog.classList.toggle('catalog-alt');
+});
+
+prevButton.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  catalog.classList.toggle('catalog');
+  catalog.classList.toggle('catalog-alt');
+});
+
 
 //Services
 
@@ -25,12 +57,14 @@ let map_popup_hide = document.querySelector('.button-close');
 
 map_popup.addEventListener('click', function(evt) {
   evt.preventDefault();
+  map_popup_show.classList.remove('map-popup-hidden');
   map_popup_show.classList.add('map-popup-show');
 });
 
 map_popup_hide.addEventListener('click', function(evt) {
   evt.preventDefault();
   map_popup_show.classList.remove('map-popup-show');
+  map_popup_show.classList.add('map-popup-hidden');
 });
 
 //Modal-form
@@ -54,11 +88,23 @@ modal_form_hide.addEventListener('click', function(evt) {
 
 //Hover on products
 
-let products_item = document.querySelectorAll('.popular-products-list-item');
-let hide = document.querySelector('.products-item-hide');
+let productsListItems = document.querySelectorAll('.popular-products-list-item');
+let productItem = document.querySelector('.products-item');
 
+for (let i = 0; i < productsListItems.length; i++) {
+  let productsListItem = productsListItems[i];
+  productsListItem.addEventListener('mouseover', function(evt) {
+    evt.preventDefault();
+    productItem.classList.remove('products-item-hide');
+    productItem.classList.add('products-item-show');
+  });
+}
 
-
-//Modal catalog
-
-let
+for (let i = 0; i < productsListItems.length; i++) {
+  let productsListItem = productsListItems[i];
+  productsListItem.addEventListener('mouseout', function(evt) {
+    evt.preventDefault();
+    productItem.classList.remove('products-item-show');
+    productItem.classList.add('products-item-hide');
+  });
+}
