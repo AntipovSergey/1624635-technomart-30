@@ -856,6 +856,10 @@ img {
   display: none;
 }
 
+.hover-shadow {
+  box-shadow:0px 4px 20px var(--extra-light-gray);
+}
+
 .products-list-item-first .popular-products-list-item-image {
   margin-top: 5px;
   margin-left: 18px;

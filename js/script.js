@@ -95,6 +95,7 @@ for (let i = 0; i < productsListItems.length; i++) {
   let productsListItem = productsListItems[i];
   productsListItem.addEventListener('mouseover', function(evt) {
     evt.preventDefault();
+    productsListItem.classList.add('hover-shadow');
     productItem.classList.remove('products-item-hide');
     productItem.classList.add('products-item-show');
   });
@@ -104,6 +105,7 @@ for (let i = 0; i < productsListItems.length; i++) {
   let productsListItem = productsListItems[i];
   productsListItem.addEventListener('mouseout', function(evt) {
     evt.preventDefault();
+    productsListItem.classList.remove('hover-shadow');
     productItem.classList.remove('products-item-show');
     productItem.classList.add('products-item-hide');
   });
