@@ -1,24 +1,3 @@
-let search_field = document.querySelector('.user-navigation-first-part-search-form');
-let search_form_input = document.querySelector('.search-form-input');
-let loopRed = document.querySelector('.loop-red-hidden')
-
-search_form_input.addEventListener('focus', function() {
-  search_field.classList.add('search-form-active');
-  loopRed.classList.remove('loop-red-hidden');
-  loopRed.classList.add('loop-red-active');
-  document.getElementById('search-form-text-field').placeholder='Перфоратор';
-
-});
-
-window.addEventListener('click', function (evt) {
-    if (search_field.classList.contains('search-form-active')) {
-    evt.preventDefault();
-    search_field.classList.remove('search-form-active');
-    loopRed.classList.remove('loop-red-active');
-    loopRed.classList.add('loop-red-hidden');
-    document.getElementById('search-form-text-field').placeholder='Поиск:';
-    }
-});
 
 //Catalog alt
 let catalog = document.querySelector('.catalog');
@@ -71,7 +50,7 @@ services_list_button.addEventListener('click', function(evt) {
 
 let map_popup = document.querySelector('.interactive-map');
 let map_popup_show = document.querySelector('.map-popup');
-let map_popup_hide = document.querySelector('.button-close');
+let map_popup_hide = document.querySelector('.button-close-map');
 
 map_popup.addEventListener('click', function(evt) {
   evt.preventDefault();
@@ -85,7 +64,7 @@ map_popup_hide.addEventListener('click', function(evt) {
   map_popup_show.classList.add('map-popup-hidden');
 });
 
-//Modal-form
+//Modal form
 
 let company_contacts_button = document.querySelector('.company-contacts-link');
 let modal_form_show = document.querySelector('.modal-form-hide');
@@ -103,28 +82,13 @@ modal_form_hide.addEventListener('click', function(evt) {
   modal_form_show.classList.add('modal-form-hide');
 });
 
+//Modal catalog hide
 
-//Hover on products
+let purchaseButton = document.querySelector('.purchase-button');
+let modalCatalog = document.querySelector('.modal-catalog-hide');
 
-let productsListItems = document.querySelectorAll('.popular-products-list-item');
-let productItem = document.querySelector('.products-item');
-
-for (let i = 0; i < productsListItems.length; i++) {
-  let productsListItem = productsListItems[i];
-  productsListItem.addEventListener('mouseover', function(evt) {
-    evt.preventDefault();
-    productsListItem.classList.add('hover-shadow');
-    productItem.classList.remove('products-item-hide');
-    productItem.classList.add('products-item-show');
-  });
-}
-
-for (let i = 0; i < productsListItems.length; i++) {
-  let productsListItem = productsListItems[i];
-  productsListItem.addEventListener('mouseout', function(evt) {
-    evt.preventDefault();
-    productsListItem.classList.remove('hover-shadow');
-    productItem.classList.remove('products-item-show');
-    productItem.classList.add('products-item-hide');
-  });
-}
+purchaseButton.addEventListener('click', function(evt) {
+  evt.preventDefault();
+  modalCatalog.classList.remove('modal-catalog-hide');
+  modalCatalog.classList.add('modal-catalog-show');
+});
