@@ -2337,6 +2337,7 @@ img {
   box-shadow: 0px 4px 20px var(--extra-light-gray);
   border-top: 7px solid var(--basic-pink-red);
   z-index: 10;
+  animation: opacity 1s;
 }
 
 .modal-catalog-hide {
