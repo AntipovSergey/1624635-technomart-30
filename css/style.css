@@ -74,6 +74,7 @@
   --dark-pink-red: #ba2732;
   --middle-dark-pink-red:#ca2c37;
   --deep-dark-pink-red: #ba2732;
+  --shade-pink-red: #b52933;
   --materials_delivery: #ffbf47;
   --instrument: #3bbce3;
   --technics: #dc91d8;
@@ -83,6 +84,7 @@
   --extra-light-brown: #f7f3ec;
 
 }
+
 
 /*Global*/
 
@@ -161,7 +163,7 @@ img {
   width: 220px;
   height: 47px;
   background-color: var(--basic-pink-red);
-  box-shadow: inset 0px -5px 0px rgba(0, 0, 0, 0.24);
+  box-shadow: inset 0px -5px 0px var(--shade-pink-red);
 }
 
 .logo-technomart {
@@ -810,7 +812,7 @@ img {
   margin-top: 20px;
   padding: 0;
   list-style-type: none;
-  font-family: PT Sans;
+  font-family: "PT Sans","Arial", sans-serif;
   font-weight: 700;
 }
 
@@ -1118,7 +1120,7 @@ img {
 
 .services-text,
 .services-list-info-text {
-  font-family: PT Sans;
+  font-family: "PT Sans","Arial", sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
@@ -1247,7 +1249,7 @@ img {
 
 .about-company-text,
 .company-contacts-text {
-  font-family: PT Sans;
+  font-family: "PT Sans","Arial", sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
@@ -1551,7 +1553,7 @@ img {
   text-align: left;
   font-size: 13px;
   line-height: 24px;
-  font-family: PT Sans;
+  font-family: "PT Sans","Arial", sans-serif;
 }
 
 .modal-form-item label {
@@ -1568,7 +1570,7 @@ img {
   padding-top: 4px;
   font-size: 13px;
   line-height: 24px;
-  font-family: PT Sans;
+  font-family: "PT Sans","Arial", sans-serif;
 }
 
 .button-wrapper {
@@ -1761,7 +1763,7 @@ img {
   grid-column: 1/-1;
   display: flex;
   justify-content: flex-start;
-  font-family: PT Sans;
+  font-family: "PT Sans","Arial", sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -1846,7 +1848,7 @@ img {
   margin-top: 20px;
   padding-top: 10px;
   padding-left: 18px;
-  font-family: PT Sans;
+  font-family: "PT Sans","Arial", sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -1871,7 +1873,7 @@ img {
 }
 
 .filter-legend {
-  font-family: PT Sans;
+  font-family: "PT Sans","Arial", sans-serif;
   font-weight: 700;
   font-size: 17px;
   line-height: 30px;
@@ -1937,7 +1939,7 @@ img {
   margin-bottom: 25px;
   border-radius: 3px;
   text-align: center;
-  font-family: PT Sans;
+  font-family: "PT Sans","Arial", sans-serif;
   font-weight: 400;
   font-size: 17px;
   line-height: 18px;
@@ -1988,7 +1990,7 @@ img {
 .supply-label {
   position: relative;
   display: block;
-  font-family: PT Sans;
+  font-family: "PT Sans","Arial", sans-serif;
   font-weight: 400;
   font-size: 15px;
   line-height: 19px;
@@ -2109,7 +2111,7 @@ img {
   width: 220px;
   background-color: var(--basic-white);
   border: 1px solid var(--very-light-gray);
-  font-family: PT Sans;
+  font-family: "PT Sans","Arial", sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -2129,7 +2131,7 @@ img {
 
 .sorted-products-subtitle,
 .sort-list-link {
-  font-family: PT Sans;
+  font-family: "PT Sans","Arial", sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -2275,7 +2277,7 @@ img {
 }
 
 .sort-pagination-link {
-  font-family: PT Sans;
+  font-family: "PT Sans","Arial", sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 18px;
@@ -2319,7 +2321,7 @@ img {
   padding: 0;
   padding-top: 25px;
   padding-bottom: 68px;
-  font-family: PT Sans;
+  font-family: "PT Sans","Arial", sans-serif;
   font-weight: 400;
   font-size: 13px;
   line-height: 24px;
